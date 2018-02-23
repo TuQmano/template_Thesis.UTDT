@@ -51,15 +51,17 @@
         \usepackage[margin=1 in]{geometry}
         
         %Espaciado
-        \usepackage{setspace} 
-        \doublespacing
+        \usepackage{setspace} % PARA "one half spacing%
+         \linespread{1.241} 
+	 % Justiciación del valor para  "1 y 1/2" 
+	 %https://tex.stackexchange.com/questions/30073/why-is-the-linespread-factor-as-it-is
         
         %Encode
         \usepackage[utf8]{inputenc}
         
         %%% CITAS - BIBLIOGRAFÍA
       
-        \usepackage[apaciteclassic,sectionbib]{apacite}
+        \usepackage[apaciteclassic,sectionbib]{chicago}  %% ESTILO CHICAGO PARA CITAS
         \usepackage[round]{natbib}
         
         \usepackage[nottoc]{tocbibind}
@@ -217,7 +219,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 
 \bibliography{biblio_tesis} 
-\bibliographystyle{newapa}
+\bibliographystyle{chicago}
 %%% REFERENCIAS QUE VIENEN DEL ARCHIVO ".BIB"
 
 \end{document}

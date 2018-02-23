@@ -1,4 +1,6 @@
-%        Thesis Template 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%        THESIS TEMPLATE (UTDT)
 
 %     Departamento de Ciencia Política y
 %     Estudios Internacionles
@@ -9,9 +11,21 @@
 %    Juan Pablo Ruiz Nicolini (www.tuqmano.com)
 
 %     Febrero de 2018
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-% ----->  PREAMBULO
+%----------------------------------------------->  NOTA PRELIMINAR IMPORTANTE <--------------------------------------------------------%
+% TODO LO QUE ESCRIBAMOS EN UNA LINEA QUE COMIENCE CON ESTE SIMBOLO "%" QUEDARÁ COMO NOTAS DEL AUTOR Y NO COMPILARÁ (Y APARECERA) EN EL DOCUMENTO A EXPORTAR (PDF). De esta manera podemos ir comentando los pasos que hacemos para entender y hacernos entender mejor qué estamos haciendo con cada comando que introducimos. 
+%--------------------------------------------------------------------------------------------------------------------------------------%
+
+
+
+
+
+% ------------------------------------------>  PREAMBULO  <-----------------------------------------
+% En esta primera parte (y hasta \begindocument) cargaremos todos las especificaciones que queremos que tenga nuestro documento. 
+
+
 
         %Cargar paquetes 
         
@@ -76,7 +90,7 @@
         \usepackage{epigraph}
 
 
-%%%%%%%%%%%%  PORTADA %%%%%%%%%%%%
+%%%%%%%%%%%%  PORTADA %%%%%%%%%%%%  Diseño de portada de Dpeto de Ciencia Poltica (UTDT).
 
 \newcommand{\subtitle}[1]{%
   \posttitle{%
@@ -115,7 +129,7 @@
 
 
 %%%%%%%%%%%%  ABSTRACT   %%%%%
-\renewcommand{\abstractname}{Resumen Ejecutivo}
+\renewcommand{\abstractname}{Resumen Ejecutivo}  % Cambio de "Abstract" a "Resumen Ejecutivo" (en español). 
 
 \begin{abstract}
 
@@ -134,23 +148,23 @@
 
 %%%%%%%%INDICE%%%%%%%%
 
-\tableofcontents
+\tableofcontents  %Crea el indice automáticamente a partir de las Secciones (\section{}) y subsecciones (\sbsection{})
 
-\thispagestyle{empty}%ELIMINA NUMERACION DE ESTA PAGINA
-\clearpage
+\thispagestyle{empty}  %ELIMINA NUMERACION DE ESTA PAGINA
+\clearpage  % SALTO DE PAGINA
 
 
 %%%%%%%%%%%%%  AGRADECIMINETOS  %%
-% Usamos un nuevo "abstract" y lo renombramos
+% Usamos un nuevo "abstract" y lo renombramos como "Agradecimientos"
 
 \renewcommand{\abstractname}{Agradecimientos}
 
-    \begin{abstract}
+    \begin{abstract}  %Lorem Ipsum para simular texto
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     
-                \hfill N.D.R.
+                \hfill N.D.R.  % FIRMA DEL AUTOR
                 
-                \hfill 27 / 10 / 2011 
+                \hfill 27 / 10 / 2011   % FECHA DE IMPRESION
     
             \thispagestyle{empty}%ELIMINA NUMERACION DE ESTA PAGINA
     \end{abstract}
@@ -158,9 +172,11 @@
 \clearpage % Salto de página
 
 %%%%%%%%% INTRODUCCION %%%%%%%%
-\section{INTRODUCCIÓN}
+\section{INTRODUCCIÓN} % Se marca el inicio de una nueva sección y se pone el nombré que llevara dentro de las llaves {INTRO}
 
-\subsection*{Apartado I}
+
+\subsection*{Apartado I} % Igual que para las secciones, pero se ordena DENTRO  de estas. El * entre el comanando y las llaves evita que se lo tenga en cuenta en el indice
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \subsection*{Datos} 
@@ -177,7 +193,9 @@ At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
-\subsection{El caso (1)}
+\subsection{El caso (1)}  
+
+% Al no inlcuir el * como en las subsecciones de la sección anterior (INTRODUCCIÓN), estas sí aparecerán en el indice
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 

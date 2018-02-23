@@ -17,7 +17,7 @@
         
         \documentclass[12pt]{article} %Tipo de documento
         
-        \usepackage[english, spanish]{babel} % Idiomas en los que se escribe el documento. 
+        \usepackage[spanish, english]{babel} % Idiomas en los que se escribe el documento. 
         
         \usepackage[utf8]{inputenc} % Para poner acentos y eñes directamente.
 
@@ -52,18 +52,15 @@
         
         %Espaciado
         \usepackage{setspace} % PARA "one half spacing%
-         \linespread{1.241} 
-	 % Justiciación del valor para  "1 y 1/2" 
-	 %https://tex.stackexchange.com/questions/30073/why-is-the-linespread-factor-as-it-is
+         \linespread{1.241} % Justiciación del valor para  "1 y 1/2" https://tex.stackexchange.com/questions/30073/why-is-the-linespread-factor-as-it-is
         
         %Encode
         \usepackage[utf8]{inputenc}
         
         %%% CITAS - BIBLIOGRAFÍA
       
-        \usepackage[apaciteclassic,sectionbib]{chicago}  %% ESTILO CHICAGO PARA CITAS
         \usepackage[round]{natbib}
-        
+        \bibliographystyle{chicago}
         \usepackage[nottoc]{tocbibind}
     
     
@@ -219,7 +216,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 
 \bibliography{biblio_tesis} 
-\bibliographystyle{chicago}
+
 %%% REFERENCIAS QUE VIENEN DEL ARCHIVO ".BIB"
 
 \end{document}

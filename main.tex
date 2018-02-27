@@ -1,0 +1,290 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%     Template de Tesis 
+
+%     Departamento de Ciencia Política y
+%     Estudios Internacionales
+
+%     Universidad Torcuato Di Tella
+
+%  Creado por Federico Fuchs y 
+%           Juan Pablo Ruiz Nicolini (www.tuqmano.com)
+
+%    Febrero de 2018
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%---------> Este es el espacio de trabajo de ShareLaTeX para la edición de documentos científicos con el formato requerido en las especificaciones de los posgrados de Ciencia Política de la Universidad Torcuato Di Tella. 
+
+%---------> Abajo de estas primeras notas se puede encontrar el "script" con el que se creará el documento final luego de la compilación. Esto se realiza apretando el botón derecho de color azul en el panel de la derecha ("Recompile") o con el atajo  "Cmd + Enter". Este script es un documento cuya extensión es ".tex". En esta caso se llama "main.tex". 
+
+%---------> A un lado de "Recompile" se encuentran dos iconos. El primero (una hoja) en el que seleccionamos entre visualizar la compilación o el reporte de errores a corregir y otros archivos "logs" (de registro) del proceso de producción del documento.  A su lado un botón de descarga (flecha abajo) que permite bajar el producto compilado (PDF)
+
+%---------> El panel de la izquierda muestra la "carpeta" donde alojamos todos los archivos relacionados con el documento que queremos producir. Allí se cargaran las imágenes que quieran incorporarse (un ejemplo en el script más adelante) y el archivo que contiene la bibliografía (.bib) y el archivo principal con el script ("main.tex"). 
+
+
+%---------> A lo largo del script iremos introduciendo comentarios de los comandos y algunas sugerencias adicionales. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+ %-------> Desde acá y hasta el \begin{document} se cargaran todas las especificaciones que deberá tener el producto final a ser compilado y los paquetes necesarios para producirlo. 
+
+
+
+
+% ----->  PREÁMBULO 
+
+        %Cargar paquetes 
+        
+        \documentclass[12pt]{article} %Tipo de documento
+        
+        \usepackage[spanish, english]{babel} % Idiomas en los que se escribe el documento. 
+        
+        \usepackage[utf8]{inputenc} % Para poner acentos y eñes directamente. ENCODE
+
+
+        %-----> FUENTE
+        \usepackage{times} % Usa <<Times New Roman>>
+
+        % Paquetes para gráficos, tablas , formulas, referencias
+	
+        \usepackage{graphicx}
+        \usepackage{amsmath}
+        \usepackage{dcolumn}
+        \usepackage{rotating}
+        \usepackage{float} 
+        \usepackage{titling}
+        \usepackage{floatflt}
+        \usepackage{graphics}
+        \usepackage{wrapfig}
+        \usepackage{booktabs}
+        \usepackage{dcolumn}
+        \usepackage{tabularx}
+        \usepackage{caption}
+        \usepackage{subcaption}
+        \usepackage{tikz}
+        \usepackage{parskip}
+        \usepackage{amssymb}
+        \usepackage{amsthm}
+        \usepackage{framed}
+        \usepackage{dirtytalk}
+        \usepackage{lipsum} %Simulación de texto "LoremIpsum"
+
+        %Margenes
+        \usepackage[margin=1 in]{geometry}
+        
+        %Espaciado
+        \usepackage{setspace} % PARA "one half spacing %
+         \linespread{1.241} 
+         
+         % Justificación del valor para  "1 y 1/2"->https://tex.stackexchange.com/questions/30073/why-is-the-linespread-factor-as-it-is
+        
+        
+        \usepackage{indentfirst} %Sangría en primer párrafo
+        
+        %%% CITAS - BIBLIOGRAFÍA
+      
+        \usepackage[round]{natbib}
+        \bibliographystyle{chicago}
+        \usepackage[nottoc]{tocbibind}
+    
+    
+
+        %%% REFERENCIAS
+        \usepackage{hyperref}
+        % links del indice en negro; citas y url en azul
+        \hypersetup{colorlinks = true, urlcolor={blue}, 
+        citecolor={blue}, linkcolor ={black}}
+        
+        %%% EPÍGRAFE
+        \usepackage{epigraph}
+
+
+%%%%%%%%%%%%  PORTADA ---> Esto responde a un requerimento especifico del Depto. de Ciencia Política de UTDT. Puede eliminarse. 
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\normalsize#1\end{center}
+    \vskip0.5em}%
+}
+
+
+\title{\normalsize{UNIVERSIDAD TORCUATO DI TELLA}\\
+\normalsize{Departamento de Ciencia Poltíca y Estudios Internacionales}\\ \vskip4em 
+\large{\textbf {Una aproximación a un título } }}
+\subtitle{ \textbf {El caso de esta tesis} \vskip2em }
+\author{
+        Autor: Nombre Apellido Autor\\
+        Tutor: Nombre Apellido Tutor\\}
+        
+
+\date{\vskip12em Firma del tutor \hskip10em Octubre, 2011 \vskip5em}
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Ejemplo para una portada normal de un artículo 
+
+%\title{}   TITULO DEL ARTICULO
+
+%\author{Nombre de Autor\thanks{Institución} -  \href{mailto:correo@gmail.com}{correo@gmail.com}}  NOMBRE DE AUTOR, PERTENENCIA INSTITUCIONAL y DATO DE CONTACTO
+
+%\date{Fecha del XXXX}  FECHA DE PUBLICACIÓN
+
+
+%\begin{document}   LO ANTERIOR EN EL PREÁMBULO. SE CREA EL TITULO UNA VEZ QUE EMPEZÓ EL DOCUMENTO 
+    
+    %\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document} % Comienza documento
+
+    \begin{framed}
+        \maketitle
+        \thispagestyle{empty} %ELIMINA NUMERACIÓN DE PAGINA
+    \end{framed}
+
+\setlength{\parindent}{0.4cm} % Margenes
+
+
+\clearpage % Salto de página
+
+
+
+%%%%%%%%%%%%  ABSTRACT   %%%%%
+\renewcommand{\abstractname}{Resumen Ejecutivo} 
+%Cambia nombre (por default en inglés)
+
+\begin{abstract}
+  
+    % \noindent remueve margen inicial
+       \noindent Este \textit{template} de \LaTeX fue desarrollado por \textbf{Federico Fuchs} y \href{http://www.tuqmano.com}{Juan Pablo Ruiz Nicolini} para la producción de tesis del \textit{Departamento de Ciencia Política} de la \textit{Universidad Torcuato Di Tella}. A lo largo de este documento se introducirán algunos comandos básicos y herramientas útiles para la edición del texto, gráficos, tablas y referencias bibliográficas. 
+    
+        \thispagestyle{empty}
+        %ELIMINA NUMERACIÓN DE ESTA PAGINA
+        
+        %%%%%%%   COMANDOS ÚTILES PARA ESCRITURA %%%%%%
+        
+        
+        % \textit{}  PARA TEXTO EN ITÁLICAS
+        % \textbf{} PARA TEXTO EN NEGRITAS
+        
+        % (de manera análoga a un procesado de textos como Word, el "Cmd + I" escribirá en el script el comando para generar itálicas, y "Cmd + B" hará lo mismo con las negritas). 
+        
+        %  \noindent Elimina sangría en el párrafo 
+        
+  \clearpage % Salto de página
+  
+  
+\end{abstract}  % La sección dedicana al "abstract" comienza con un \begin{abstract} y termina con el \end{abstract}
+
+
+
+%%%%%%%%INDICE%%%%%%%%
+\renewcommand{\contentsname}{Índice} % Cambia nombre
+
+\tableofcontents % CREA EL ÍNDICE 
+
+\thispagestyle{empty} %ELIMINA NUMERACIÓN DE ESTA PAGINA
+
+\clearpage % Salto de página
+
+
+%%%%%%%%%%%%%  AGRADECIMIENTOS  %%
+% Usamos un nuevo "abstract" y lo renombramos !!!
+
+\renewcommand{\abstractname}{Agradecimientos}
+
+    \begin{abstract}
+    
+            \lipsum[1-3] %CREA TEXTO SIMULADO
+    
+    
+                \hfill F.D.A.  % "Firma del Autor" (Con espacios en blanco "llenados" hacia el margen derecho - con \hfill)
+                
+                \hfill 27 / 10 / 2011 % "Fecha"
+    
+            \thispagestyle{empty} %ELIMINA NUMERACIÓN DE ESTA PAGINA
+    \end{abstract}
+    
+\clearpage % Salto de página
+
+%%%%%%%%% INTRODUCCION %%%%%%%%
+
+
+
+\section{INTRODUCCIÓN} % No hace falta el \begin. Cada nueva sección marca el final de la anterior. 
+
+\subsection*{Apartado I} % El "*" en sub sección hace que la misma no sea tenida en cuenta para su numeración ni su indexación. 
+ \lipsum[1-4]  %Simula texto
+
+\subsection*{Datos} 
+%En esta sección incluimos comando para citas múltiples en un mismo párrafo
+ \lipsum[1]  Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat (\citealp{dunning_design-based_2010,brady_rethinking_2010,calvo_ballot_2009}).  % \citealp inserta referencias múltiples entre paréntesis automáticamente. Linkea con listado de referencias al final del texto. Del paquete natbib -> https://es.sharelatex.com/learn/Bibliography_management_with_natbib
+
+\lipsum[1]
+
+%%%%%  CASOS DE ESTUDIO  %%%%% Secciones con texto simulado 
+
+\section{CASOS}
+
+\lipsum[1]
+
+
+\subsection{El caso (1)}
+
+\lipsum[1]
+
+
+\subsection{El caso (2)}
+
+
+\lipsum[1]
+
+\clearpage
+
+
+%%%%%  CONCLUSIÓN  %%%%%
+
+\section{CONCLUSIÓN}
+
+
+%%%% Comandos para insertar epígrafe %%%
+\epigraph{``Acá hay un espacio para poner alguna cita ingeniosa para ilustrar la sección"}{--- \textup{Un tipo ingenioso}}
+
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit \cite{ruiz_nicolini_juan_pablo_fuego_nodate} in voluptate velit esse cillum dolore eu fugiat nulla pariatur \citep{ruiz_nicolini_impacto_2017}. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. % DOS EJEMPLOS DE CITAS: nombrados en el cuerpo del texto (\cite) y como referencia al final de una oración \citep. En ambos casos los paréntsis se generan automáticamente. 
+
+\lipsum[1-3]
+
+\clearpage
+
+%%%% REFERENCIAS BIBLIOGRÁFICAS %%%%%
+\renewcommand{\bibname}{REFERENCIAS}% Bibliografía	-> cambio de nombre por el que viene asignado por default en ingés. 
+
+\bibliography{biblio_tesis} % Crea la lista de referencias, siguiendo estilo "chicago", especificado en el preámbulo. 
+
+
+%%% NOTAS ADICIONALES: 
+
+%--------->  LAS REFERENCIAS, que se citaron a lo largo del documento, están contenidas en un archivo llamado "biblio_tesis.bib". Esa es la fuente con la que funcionan las distintas variantes de \cite y la lista de referencias recién creada. Existen múltiples programas para hacer el manejo de las bibliotecas de citas bibliográficas (Zotero -----> https://www.zotero.org/    o    Mendeley ----> https://www.mendeley.com)
+
+%---------> ShareLaTex permite:  
+%  a) La colaboración en línea con coautores (revisiones, chats, historial). 
+%  b) Poder editar los mismos documentos desde cualquier lugar con acceso a la cuenta en línea. No hace falta instalar nada en una computadora
+%  c)  Tiene buenas capacidades de corrector sintáctico en distintos idiomas y alertas de errores en la sintaxis de código para poder corregir (debug) el mismo. 
+% d) Se puede descargar la compilación en PDF y la "carpeta" entera con todos los archivos
+% e) Una gran virtud es el "autocomplete" que permite más fácilmente escribir las funciones, por ejemplo. Del mismo modo, al cargar alguna \cite{}  ShareLaTex empieza a desplegar todos los items en el archivo ".bib" que cargamos y es más fácil encontrar la referencia. 
+
+
+\end{document}
+

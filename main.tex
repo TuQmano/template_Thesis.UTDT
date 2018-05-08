@@ -1,3 +1,6 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%ShareLaTeX URL
+https://www.sharelatex.com/read/hvjphgfvmhmk
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -13,13 +16,10 @@
 
 %    Febrero de 2018
 
+			%   ACTUALIZADO: 8 de mayo de 2018
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%ShareLaTeX URL
-https://www.sharelatex.com/read/hvjphgfvmhmk
-
-
-
 
 %---------> Este es el espacio de trabajo de ShareLaTeX para la edición de documentos científicos con el formato requerido en las especificaciones de los posgrados de Ciencia Política de la Universidad Torcuato Di Tella. 
 
@@ -229,12 +229,71 @@ https://www.sharelatex.com/read/hvjphgfvmhmk
 \section{INTRODUCCIÓN} % No hace falta el \begin. Cada nueva sección marca el final de la anterior. 
 
 \subsection*{Apartado I} % El "*" en sub sección hace que la misma no sea tenida en cuenta para su numeración ni su indexación. 
- \lipsum[1-4]  %Simula texto
+ \lipsum[1]  %Simula texto
+ 
+ 
+ 
+  %%%% ----- >  INSERTAR IMAGEN 
+ \begin{figure}[H]  
+  \centering 
+    \includegraphics[width=.6\textwidth]{CABA.png}
+  \caption{Elección Diputado Nacional 2017 - Ciudad Autónnoma de Buenos Aires. Grilla disponible en \href{https://github.com/TuQmano}{https://github.com/TuQmano}}
+  \label{fig:CABA}
+\end{figure} 
+
+ 
+ %%% CÓMO TRABJAR CON IMAGENES
+ 
+ \textbf{En este párrafo vamos a hacer referencia de cómo trabajar con imágenes, ajustar la posición, el tamaño y editar la nota al pie. Para ilustrar o dejaremos en el idioma original y luego mostraremos como traducirlo.}
+ 
+
+%  \begin{figure}[H]  ---->  posiciona la imagen en ese preciso lugar. Existe varias opciones para setear la posición de las imagenes -> https://stackoverflow.com/questions/518284/problem-with-float-and-pictures-in-latex#comment331982_518418 
+
+%  \centering  ---->  centrar imagen
+
+%  \includegraphics[width=.5\textwidth]{NombreImagen.png} ---->   Llama al archivo por su nombre.extensión (debe estar en la misma carpeta que .tex) + ajusta porcentualmente (.5) en este caso al tamaño del ancho del lugar de escritura
+
+
+%   \caption{ ---->   Agrega texto de referencia debajo de la imagen
+
+%   \label{ ---->  nombre corto de la imagen para llamarlo como referencia cruzada y crear tablas de figuras
+
+%  \end{figure} ---->  Cerrar el espacio abierto para insertar figura
+
+
+%%%%%%%%%%%%% RENEW COMMAND -> EJEMLPO %%%%
+
+
+
+ \begin{figure}[H]  
+  \centering 
+    \includegraphics[width=\textwidth]{renew.png}
+  \caption{¿Cómo cambiar encabezados que vienen por \textit{default} en \LaTeX ?}
+  \label{fig:renew}
+\end{figure} 
+
+
+Una característica cuando trabajamos con  \LaTeX es que cuando empezamos a trabajar, muchos valores ya vienen asignados por \textit{default}. Pero con comandos muy simples podemos ajustar cómo queremos ver esos valores pre seteados. De igual manera como cambiamos el nombre \verb=Abstract= por \verb=Resumen Ejecutivo= podemos hacerlo para valores como \textit{Figure} o \textit{Equation} que se imprimen cuando insertaoms cada uno de esos objetos. 
+
+Por ejemplo, si queremos cambiar el Figure del cuadro anterior por un nombre en castellano, deberíamos incluir este código en el preambulo del documento: 
+
+\verb=\renewcommand{\figurename}{Fig.}= 
+
+
+%  NOTA ======>   Si quisiéramos cambiar el encabezado que por default viene en la nota al pie ("Figure")  deberíamos poner en el preambulo :   
+
+% ------->  \renewcommand{\figurename}{Fig.}
+
+
+
+
 
 \subsection*{Datos} 
 %En esta sección incluimos comando para citas múltiples en un mismo párrafo
- \lipsum[1]  Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat (\citealp{dunning_design-based_2010,brady_rethinking_2010,calvo_ballot_2009}).  % \citealp inserta referencias múltiples entre paréntesis automáticamente. Linkea con listado de referencias al final del texto. Del paquete natbib -> https://es.sharelatex.com/learn/Bibliography_management_with_natbib
-
+ En esta sección mostramos ejemplos de cómo se puede trabajar con \textit{\textbf{cite}} para referenciar bibliografía. 
+ (\citealp{dunning_design-based_2010,brady_rethinking_2010,calvo_ballot_2009}).  % \citealp inserta referencias múltiples entre paréntesis automáticamente. Linkea con listado de referencias al final del texto. Del paquete natbib -> https://es.sharelatex.com/learn/Bibliography_management_with_natbib
+Lo que sigue a continuación es nuevamente texto simulado con \verb=lipsum=.
+ 
 \lipsum[1]
 
 %%%%%  CASOS DE ESTUDIO  %%%%% Secciones con texto simulado 
@@ -254,9 +313,6 @@ https://www.sharelatex.com/read/hvjphgfvmhmk
 
 \lipsum[1]
 
-\clearpage
-
-
 %%%%%  CONCLUSIÓN  %%%%%
 
 \section{CONCLUSIÓN}
@@ -265,13 +321,10 @@ https://www.sharelatex.com/read/hvjphgfvmhmk
 %%%% Comandos para insertar epígrafe %%%
 \epigraph{``Acá hay un espacio para poner alguna cita ingeniosa para ilustrar la sección"}{--- \textup{Un tipo ingenioso}}
 
-
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit \cite{ruiz_nicolini_juan_pablo_fuego_nodate} in voluptate velit esse cillum dolore eu fugiat nulla pariatur \citep{ruiz_nicolini_impacto_2017}. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. % DOS EJEMPLOS DE CITAS: nombrados en el cuerpo del texto (\cite) y como referencia al final de una oración \citep. En ambos casos los paréntsis se generan automáticamente. 
 
 \lipsum[1-3]
 
-\clearpage
 
 %%%% REFERENCIAS BIBLIOGRÁFICAS %%%%%
 \renewcommand{\bibname}{REFERENCIAS}% Bibliografía	-> cambio de nombre por el que viene asignado por default en ingés. 
@@ -292,4 +345,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 
 \end{document}
+
 
